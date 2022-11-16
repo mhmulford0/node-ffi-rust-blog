@@ -6,7 +6,6 @@ const lib = ffi.Library("../rust/target/release/libnode_math.dylib", {
 });
 
 const app = express();
-
 app.use(express.json());
 
 app.get("/fibonacci", (req, res) => {
