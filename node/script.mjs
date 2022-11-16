@@ -1,3 +1,5 @@
+// This is the script used to determine exec time to compare against rust
+
 function fibonacci(n) {
   if (n === 0) {
     return 0;
@@ -18,6 +20,11 @@ function fibonacci(n) {
 }
 
 function main() {
-  fibonacci(100);
+  let iterations = 100_000_000;
+
+  for (let i = 0; i <= iterations; i++) {
+    fibonacci(90);
+  }
 }
+
 main();

@@ -1,6 +1,4 @@
-import type { Response, Request } from "express";
 import express from "express";
-import bodyParser from "body-parser";
 import ffi from "ffi-napi";
 
 const lib = ffi.Library("../rust/target/release/libnode_math.dylib", {
@@ -9,9 +7,9 @@ const lib = ffi.Library("../rust/target/release/libnode_math.dylib", {
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(express.json());
 
-app.get("/fibonacci", (req: Request, res: Response) => {
+app.get("/fibonacci", (req, res) => {
   if (typeof req.body.place === "number") {
     const result = lib.fibonacci(req.body.place);
     return res.json({ data: result });
