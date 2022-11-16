@@ -1,5 +1,5 @@
 #[no_mangle]
-pub extern "C" fn fib(n: u16) -> u64 {
+pub extern "C" fn fibonacci(n: u16) -> u64 {
     if n == 0 {
         return 0;
     } else if n == 1 {

@@ -1,6 +1,6 @@
-use node_math::fib;
+use node_math::fibonacci;
 
 fn main() {
-    fib(300);
+    fibonacci(300);
     println!("Hello, world!");
 }
