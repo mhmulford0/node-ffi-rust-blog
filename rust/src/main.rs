@@ -1,10 +1,12 @@
 use node_math::fibonacci;
 
 fn benchmark() {
-    let iterations = 100_000_000;
+    let iterations = 100;
 
-    for _i in 1..=iterations {
-        fibonacci(90);
+    for i in 1..=iterations {
+        println!("iteration {}", i);
+        let data = fibonacci(900_000_000);
+        println!("data is {}", data)
     }
 }
 fn main() {

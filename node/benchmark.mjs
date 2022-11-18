@@ -20,10 +20,11 @@ function fibonacci(n) {
 }
 
 function main() {
-  let iterations = 100_000_000;
+  let iterations = 100;
 
   for (let i = 0; i <= iterations; i++) {
-    fibonacci(90);
+    const data = BigInt(fibonacci(1000));
+    console.log(data)
   }
 }
 
